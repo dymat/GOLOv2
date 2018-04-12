@@ -10,3 +10,13 @@ It comes with a **tiny-yolo caffe model** which I derived from original weights 
 
 # !Important!
 The caffe version works well -- **the NCS version doesn't**. This is one of the main reasons I published my code: **I hope for some inpirations from others to make the NCS version work.**
+
+
+# Setup
+
+1. Install `gocv` as described on https://gocv.io/getting-started/
+2. Install `go-ncs` as described on https://github.com/hybridgroup/go-ncs
+3. Plug in your Movidius Neural Compute Stick
+4. `$ git clone git@github.com:dymat/GOLOv2.git`
+5. `$ cd GOLOv2`
+6. `go run *.go`
