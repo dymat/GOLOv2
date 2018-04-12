@@ -24,7 +24,7 @@ type BBox struct {
 
 func main() {
 
-	useCaffeOrNCS := "ncs" // "ncs" or "caffe"
+	useCaffeOrNCS := "caffe" // "ncs" or "caffe"
 
 	// Setup Channels
 	img_chan := make(chan *gocv.Mat, 1)
