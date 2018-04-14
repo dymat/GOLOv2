@@ -3,7 +3,7 @@ package main
 import "image/color"
 
 /*
- * Constants
+ * Constants for Yolov2 Region Layer
  */
 
 const numClasses = 20
