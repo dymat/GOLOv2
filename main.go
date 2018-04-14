@@ -24,7 +24,7 @@ type BBox struct {
 
 func main() {
 
-	useCaffeOrNCS := "caffe" // "ncs" or "caffe"
+	useCaffeOrNCS := "ncs" // "ncs" or "caffe"
 
 	// Setup Channels
 	img_chan := make(chan *gocv.Mat, 1)
@@ -43,7 +43,7 @@ func main() {
 
 	if useCaffeOrNCS == "ncs" {
 		// bootstrapping NCS devices
-		const numNCSDevices= 1
+		const numNCSDevices= 2
 		const graphFileName= "tiny-yolov2-voc.ncsmodel"
 
 
@@ -110,7 +110,7 @@ func main() {
 			textPos.Y = textPos.Y-10
 			gocv.PutText(&showImg, classNames[box.label], textPos, 1, 1.0, colors[box.label % len(colors)], 2)
 
-			fmt.Println(classNames[box.label], box.confidence)
+			//fmt.Println(classNames[box.label], box.confidence)
 		}
 
 		window.IMShow(showImg)
@@ -134,7 +134,7 @@ func producer(img_chan chan <- *gocv.Mat) {
 		webcam.Read(&img)
 
 		// Just for Debugging: Override Camera with image from disk
-		img = gocv.IMRead("person.jpg", 1)
+		//img = gocv.IMRead("person.jpg", 1)
 		img_chan <- &img
 	}
 }

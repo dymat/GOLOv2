@@ -17,8 +17,8 @@ const numBoxes = h*w*N
 var anchors = [2*N]float32 {1.08,1.19,  3.42,4.41,  6.63,11.38,  9.42,5.11,  16.62,10.52}
 //var anchors = [2*N]float32 {0.57273, 0.677385, 1.87446, 2.06253, 3.33843, 5.47434, 7.88282, 3.52778, 9.77052, 9.16828}
 
-const thresh = 0.6
-const nms_threshold = 0.24
+const thresh = 0.2
+const nms_threshold = 0.4
 
 var classNames = [20]string{"aeroplane", "bicycle", "bird", "boat", "bottle", "bus", "car", "cat","chair","cow","diningtable","dog","horse","motorbike","person","pottedplant","sheep","sofa","train","tvmonitor"}
 var colors = [20]color.RGBA{
